@@ -1,0 +1,8 @@
+#!/bin/bash
+mkdir -v compiled
+gcc square.c -o compiled/squaring -lm  &&
+echo "compiling your program for execution, Please wait!" ||
+echo "Program was unable to compile please contact an admin"
+cd compiled
+./squaring
+rm -r ../compiled || echo "Could not remove exe after runing program"
